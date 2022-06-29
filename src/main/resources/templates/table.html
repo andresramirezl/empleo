@@ -6,6 +6,7 @@
 <!-- bootstrap link -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
+
 <body>
 	<img th:src="@{/images/LOGO.png}" width="100" height="100">
 	<h1> listado de vacantes</h1>
@@ -24,7 +25,7 @@
   		</tr>
   		<tr th:each="tempVacante : ${vacantes}">
     		<td>
-    			<img th:src="@{/images/{img} (img=${tempVacante.imagen})}" width="100" height="100">
+    			<img th:src="@{/images/{img} (img=${tempVacante.image})}" width="100" height="100">
     		</td>
     		<td th:text="${tempVacante.id}"></td>
     		<td th:text="${tempVacante.name}"></td>
@@ -33,8 +34,8 @@
     		<td th:text="${tempVacante.salary}"></td>
     		<!-- <td th:text="${tempVacante.destacado == 1 ? 'SI' : 'NO'}"></td> -->
     		<td>
-    			<span th:if="${tempVacante.destacado == 1}"  class="badge bg-success">SI</span>
-    			<span th:unless="${tempVacante.destacado == 1}" class="badge bg-danger">NO</span> 
+    			<span th:if="${tempVacante.outstanding == 1}"  class="badge bg-success">SI</span>
+    			<span th:unless="${tempVacante.outstanding == 1}" class="badge bg-danger">NO</span> 
     		</td>
     		<td>
     			<a th:href="@{/vacantes/view/{id} (id=${tempVacante.id}) }" class="btn btn-success">Detalle</a>

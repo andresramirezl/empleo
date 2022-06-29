@@ -16,8 +16,11 @@ import lombok.ToString;
 		private @Getter @Setter String 	description;
 		private @Getter @Setter Date 	date;
 		private @Getter @Setter	Double 	salary;
-		private @Getter @Setter Integer destacado;
-		private @Getter @Setter String	imagen="no-image.png";
+		private @Getter @Setter Integer outstanding;
+		private @Getter @Setter String	image="no-image.png";
+		private @Getter @Setter String 	status;
+		private @Getter @Setter String  detail;
+		private @Getter @Setter String  vacant;
 	
 	}
 

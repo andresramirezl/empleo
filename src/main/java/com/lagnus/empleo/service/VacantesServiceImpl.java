@@ -27,8 +27,10 @@ public class VacantesServiceImpl implements IVacantesService{
 				vacante1.setDescription("queremos un man pa que trabaje");
 				vacante1.setDate(sdf.parse("08-02-2022"));
 				vacante1.setSalary(100.00);
-				vacante1.setDestacado(1);
-				vacante1.setImagen("logo1.png");			
+				vacante1.setOutstanding(1);
+				vacante1.setImage("logo1.png");
+				vacante1.setVacant("Ingeniero");
+				vacante1.setStatus("creada");
 				
 				Vacante vacante2 = new Vacante();
 				vacante2.setId(2);
@@ -36,8 +38,10 @@ public class VacantesServiceImpl implements IVacantesService{
 				vacante2.setDescription("queremos un man pa que trabaje");
 				vacante2.setDate(sdf.parse("08-12-2022"));
 				vacante2.setSalary(1500.00);
-				vacante2.setDestacado(0);
-				vacante2.setImagen("logo2.png");		
+				vacante2.setOutstanding(1);
+				vacante2.setImage("logo2.png");		
+				vacante2.setVacant("Ingeniero");
+				vacante2.setStatus("creada");
 				
 				Vacante vacante3 = new Vacante();
 				vacante3.setId(3);
@@ -45,8 +49,10 @@ public class VacantesServiceImpl implements IVacantesService{
 				vacante3.setDescription("queremos un man pa que trabaje");
 				vacante3.setDate(sdf.parse("08-01-2022"));
 				vacante3.setSalary(18070.00);
-				vacante3.setDestacado(1);
-				vacante3.setImagen("logo3.png");	
+				vacante3.setOutstanding(1);
+				vacante3.setImage("logo3.png");	
+				vacante3.setVacant("Ingeniero");
+				vacante3.setStatus("eliminada");
 				
 				Vacante vacante4 = new Vacante();
 				vacante4.setId(4);
@@ -54,8 +60,10 @@ public class VacantesServiceImpl implements IVacantesService{
 				vacante4.setDescription("queremos un man pa que trabaje");
 				vacante4.setDate(sdf.parse("08-05-2022"));
 				vacante4.setSalary(133800.00);
-				vacante4.setDestacado(0);
-				vacante4.setImagen("logo4.png");	
+				vacante4.setOutstanding(0);
+				vacante4.setImage("logo4.png");	
+				vacante4.setVacant("Poli");
+				vacante4.setStatus("creada");
 				
 				lista.add(vacante1);
 				lista.add(vacante2);
@@ -86,6 +94,14 @@ public class VacantesServiceImpl implements IVacantesService{
 		}
 		return null;
 	}
+
+	
+	public void guardar(Vacante vacante) {
+		lista.add(vacante);
+		
+	}
+	
+	
 	
 	
 

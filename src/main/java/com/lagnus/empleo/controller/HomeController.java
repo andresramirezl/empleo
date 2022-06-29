@@ -31,7 +31,7 @@ public class HomeController {
 	}
 	
 	@GetMapping("/listado")
-	public String mostrarListado(Model model) {
+	public String showList(Model model) {
 		List<String> lista = new LinkedList<String>();
 		lista.add("Ingeniero informatico");
 		lista.add("Mozo almacen");
